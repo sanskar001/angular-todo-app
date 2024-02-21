@@ -34,4 +34,10 @@ export class TodosComponent {
     this.todos.splice(todoIndex, 1);
     localStorage.setItem('todos', JSON.stringify(this.todos));
   }
+
+  todoToggleDoneHandler(todo: Todo) {
+    const todoIndex = this.todos.findIndex((item) => item.sno === todo.sno);
+    this.todos[todoIndex].active = !this.todos[todoIndex].active;
+    localStorage.setItem('todos', JSON.stringify(this.todos));
+  }
 }
