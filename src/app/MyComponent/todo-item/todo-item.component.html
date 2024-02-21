@@ -1,0 +1,9 @@
+<div
+  class="my-3 w-100 d-flex justify-content-between align-items-center border p-2 rounded"
+>
+  <div>
+    <h3>{{ todo.title }}</h3>
+    <p>{{ todo.desc }}</p>
+  </div>
+  <button class="btn btn-danger h-50" (click)="onClick(todo)">Delete</button>
+</div>

@@ -1,1 +1,8 @@
-<p>todos works!</p>
+<!-- *ngFor is directive to create list mapping -->
+
+<div *ngFor="let todo of todos">
+  <app-todo-item
+    [todo]="todo"
+    (todoDelete)="todoDeleteHandler($event)"
+  ></app-todo-item>
+</div>
